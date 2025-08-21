@@ -20,7 +20,7 @@ export default function Filter({handler, search, allCountries, setCardsArray}) {
     <div className="icon">
       <img src={searchIcon} alt="icon" />
     </div>
-    <input onChange={(e)=>search(e.target.value)} type="text" placeholder="Search for a country..." />
+    <input onChange={(e)=>search(e.target.value.toLocaleLowerCase())} type="text" placeholder="Search for a country..." />
     <div className="clear" onClick={()=>{
       document.querySelector('input').value = '';
       search('');

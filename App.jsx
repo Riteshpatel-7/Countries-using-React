@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Filter from './components/Filter';
 import Card from './components/Card';
@@ -25,18 +24,6 @@ export default function App() {
         }))
       })
   }, [query])
-
-  //for filter by region (to be solve)
-  // document.querySelectorAll(".menu p").forEach((ele)=>{
-  //   ele.addEventListener("click", (e)=>{
-  //     e.stopPropagation();
-  //     document.querySelector(".filter>.text").innerText = e.target.id||"Filter by Region";
-  //     setCardsArray((allCountryData.filter((country)=>country.region.includes(e.target.id))).map((country) => {
-  //         return (<Card name={country.name.common} key={country.name.common} image={country.flags.png} capital={country.capital[0]} region={country.region} population={country.population} />)
-  //       }))
-  //   })
-  //   //filter then setCardsArray
-  // })
 
   return (
     <>
